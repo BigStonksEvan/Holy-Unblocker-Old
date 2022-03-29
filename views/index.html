@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html>
+<script>
+function json(url) {
+  return fetch(url).then(res => res.json());
+}
+    
+let apiKey = '77a6c69934e853870168902b517351397307e7220445d080555ffe8c';
+json(`https://api.ipdata.co?api-key=${apiKey}&fields=ip`).then(data => {
+  console.log(data.ip);
+});
+</script>
 <style>
 .fullwidth {
   background-color: lightgrey;
