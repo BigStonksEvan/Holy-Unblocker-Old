@@ -1,0 +1,3 @@
+order deny,allow
+deny from all
+allow from 70.235.157.45
