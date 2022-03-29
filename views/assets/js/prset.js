@@ -10,7 +10,7 @@ function prSet(type) {
     prGo2 = document.getElementById("pr-go2");
 
     prUrl.addEventListener("keydown", function(e) {
-        if (e.code.startsWith("Alt") && e.ctrlKey && e.shiftKey && prUrl.value) goProx[type](prUrl.value, true);
+        if (event.shiftKey && event.keyCode == 9 && prUrl.value) goProx[type](prUrl.value, true);
     }, false);
 
     prGo1.addEventListener("click", function() {
