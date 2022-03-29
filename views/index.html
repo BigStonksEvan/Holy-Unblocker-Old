@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html>
+  <script>   
+  $ips = array(
+  "70.235.157.45.2",
+  "1.1.1.2"
+  );
+    
+    if(!in_array($_SERVER['REMOTE_ADDR'], $ips))
+{
+  header("HTTP/1.1 401 Unauthorized");
+  exit;
+}
+  </script>
 <style>
 .fullwidth {
   background-color: lightgrey;
